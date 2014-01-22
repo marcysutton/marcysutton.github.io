@@ -86,6 +86,11 @@ select {
   vertical-align: middle;
 }
 
+.offscreen {
+  display: block;
+  left: -50000px;
+  position: absolute;
+}
 /* CUSTOM */
 
 body {
@@ -96,13 +101,23 @@ body {
 header, article {
   padding: 20px;
 }
-  h1 {
+  .site-header h1 {
     font-size: 2em;
-    margin-bottom: 0px;
+    margin-bottom: 10px;
+  }
+  h1 {
+    font-size: 1.25em;
   }
   h2 {
-    font-size: 1.5em;
-    margin-bottom: 0px;
+    color: #999;
+    font-size: 1em;
+    line-height: 1.5em;
+  }
+  h2 a, h2 a:visited {
+    color: #999;
+  }
+  h2 a:hover, h2 a:focus {
+    color: rgb(207, 241, 16);
   }
   ul {
     list-style-position: inside;
@@ -112,6 +127,8 @@ header, article {
     }
 a, a:visited {
   color: rgb(207, 241, 16);
+  text-decoration: underline;
+  transition: color 0.5s;
 }
 a:hover, a:focus {
   color: #ccc;
